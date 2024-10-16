@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Student Phone Number</th>
+                <th>Student Email</th>
+                <th>Student Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in student %}
+            <tr>
+                <td>{{x.student_id}}</td>
+                <td>{{x.student_name}}</td>
+                <td>{{x.student_phone}}</td>
+                <td>{{x.student_email}}</td>
+                <td>{{x.stud_status}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br><br>
+
+    <h1>Book Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Published Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in book %}
+            <tr>
+                <td>{{x.book_id}}</td>
+                <td>{{x.title}}</td>
+                <td>{{x.author}}</td>
+                <td>{{x.published_year}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br><br>
+
+    <h1>Borrowing Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Borrow ID</th>
+                <th>Borrow Date</th>
+                <th>Return Date</th>
+                <th>Book ID</th>
+                <th>Student ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in borrowing %}
+            <tr>
+                <td>{{x.borrow_id}}</td>
+                <td>{{x.borrow_date}}</td>
+                <td>{{x.return_date}}</td>
+                <td>{{x.book_id_id}}</td>
+                <td>{{x.student_id_id}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
